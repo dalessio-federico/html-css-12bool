@@ -1,0 +1,109 @@
+/* debug */
+.debug .row [class*=col-] {
+  border: 2px solid black;
+  height: 25vh;
+}
+/* fine debug, da cancellare in seguito */
+/* AI fini dell'esercizio terrò attiva la parte Debug */
+
+/* regole basic */
+* {
+  padding: 0;
+  Margin: 0;
+  box-sizing: border-box;
+}
+/* Con Row voglio indicare il "contenitore" dei contenuti, sia questo un intera riga all'interno del nostro progetto, sia una sottosezione della riga stessa*/
+.row {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+/* applico l'after al row in modo tele che ogni volta ci sia un elemento flottante nelle sezioni, questo abbia allegato il clearfix.*/
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* fine regole basic */
+
+/* Impostazioni colonne */
+/* imposto le classi col-1,2,3 etc in modo tale che vado ad affincarsi e adattino la loro altezza in base al contenuto */
+.row [class*=col-] {
+  float: left;
+}
+/* Tramite questa sintassi andremmo a dire al browser di calcolare la larghezza delle nostre colonne prendendo il massimale, frazionandolo per 12 e moltiplicandolo per il numero di colonne che deve occupare. */
+.col-1 {
+  width: calc( (100% / 12) * 1)
+}
+.col-2 {
+  width: calc( (100% / 12) * 2)
+}
+.col-3 {
+  width: calc( (100% / 12) * 3)
+}
+.col-4 {
+  width: calc( (100% / 12) * 4)
+}
+.col-5 {
+  width: calc( (100% / 12) * 5)
+}
+.col-6 {
+  width: calc( (100% / 12) * 6)
+}
+.col-7 {
+  width: calc( (100% / 12) * 7)
+}
+.col-8 {
+  width: calc( (100% / 12) * 8)
+}
+.col-9 {
+  width: calc( (100% / 12) * 9)
+}
+.col-10 {
+  width: calc( (100% / 12) * 10)
+}
+.col-11 {
+  width: calc( (100% / 12) * 11)
+}
+.col-12 {
+  width: calc( (100% / 12) * 12)
+}
+/* fine impostazioni colonne */
+
+/* impostazioni margini */
+/* applicando gli stessi calcoli ma ad un margin-left potremmo dire al browser di calcolare le colonne vuote che ci sono prima di quella che vogliamo abbia contenuto */
+.offset-1 {
+  margin-left: calc( (100% / 12) * 1)
+}
+.offset-2 {
+  margin-left: calc( (100% / 12) * 2)
+}
+.offset-3 {
+  margin-left: calc( (100% / 12) * 3)
+}
+.offset-4 {
+  margin-left: calc( (100% / 12) * 4)
+}
+.offset-5 {
+  margin-left: calc( (100% / 12) * 5)
+}
+.offset-6 {
+  margin-left: calc( (100% / 12) * 6)
+}
+.offset-7 {
+  margin-left: calc( (100% / 12) * 7)
+}
+.offset-8 {
+  margin-left: calc( (100% / 12) * 8)
+}
+.offset-9 {
+  margin-left: calc( (100% / 12) * 9)
+}
+.offset-10 {
+  margin-left: calc( (100% / 12) * 10)
+}
+.offset-11 {
+  margin-left: calc( (100% / 12) * 11)
+}
+.offset-12 {
+  margin-left: calc( (100% / 12) * 12)
+}

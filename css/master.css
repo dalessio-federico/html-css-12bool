@@ -1,0 +1,33 @@
+/* non avendo bisogno di un reset dei margini/padding, già presente nel framework parto direttamente con regole specifiche al caso */
+/* do aggiunte specifiche alle row per questo caso */
+.row {
+  background-color: pink;
+}
+/* posizionamento centrato dei testo */
+/* dando ai col un position relative, posso spostare i p al loro interno a mio piacimento */
+/* dando anche un text-aling center l'effeto è migliore */
+[class*=col-] {
+  position: relative;
+  text-align: center;
+}
+/* per farlo do ai p un position absolute e aggiiusto la posizione con la proprietà trasform translate */
+.row p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* specifiche ultima riga */
+/* usando degli id posso dare ulteriori specifici comportamenti ai miei contenitori */
+/* ho aggiunto un padding per centrare il contenuto */
+#nested {
+  padding: 1vh;
+}
+/* dando a tutti i col preseti nell'id caratteristiche aggiuntive posso ottenere l'effetto desiderato */
+#nested [class*=col-] {
+  height: 23vh;
+  border: 1px solid white;
+  background-color: #f98297;
+}
+/* Ai fini dell'esercizio vengono mantenute altezze fisse, ma grazie alla proprietà float queste possono variare. Basta rimuovere la classe debug*/

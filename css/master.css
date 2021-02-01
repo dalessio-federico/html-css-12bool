@@ -21,11 +21,13 @@
 /* specifiche ultima riga */
 /* usando degli id posso dare ulteriori specifici comportamenti ai miei contenitori */
 /* ho aggiunto un padding per centrare il contenuto */
-#nested {
+#nested1,
+#nested2 {
   padding: 1vh;
 }
 /* dando a tutti i col preseti nell'id caratteristiche aggiuntive posso ottenere l'effetto desiderato */
-#nested [class*=col-] {
+#nested1 [class*=col-],
+#nested2 [class*=col-] {
   height: 23vh;
   border: 1px solid white;
   background-color: #f98297;
